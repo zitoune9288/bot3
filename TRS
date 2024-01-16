@@ -1,0 +1,90 @@
+import os
+import time
+import random
+import webbrowser
+
+# Changer le titre de la fenêtre CMD
+os.system("title TRS-bot by zit_zitoune")
+
+# Définir le motif dans une variable
+motif = '''
+
+████████╗██████╗ ███████╗      ██████╗  ██████╗ ████████╗                  V1
+╚══██╔══╝██╔══██╗██╔════╝      ██╔══██╗██╔═══██╗╚══██╔══╝
+   ██║   ██████╔╝███████╗█████╗██████╔╝██║   ██║   ██║   
+   ██║   ██╔══██╗╚════██║╚════╝██╔══██╗██║   ██║   ██║   
+   ██║   ██║  ██║███████║      ██████╔╝╚██████╔╝   ██║   
+   ╚═╝   ╚═╝  ╚═╝╚══════╝      ╚═════╝  ╚═════╝    ╚═╝   
+                                                         
+[1] Lancer le bot              [2] Tiktok             [5] Quitter
+[3] Instagram                  [4] Solde TRA       
+'''
+
+# Afficher le motif
+print(motif)
+
+# Demander à l'utilisateur de choisir
+choix_utilisateur = input("Veuillez choisir: ")
+
+# Traitement en fonction du choix
+if choix_utilisateur == "1":
+    print("Vous avez choisi 1. Exécution du bot...")
+    time.sleep(3)
+    phrase = input("Veuillez entrer votre mail paypal: ")
+    print()
+    print()
+
+    print("Veuillez patientez quelque secondes...")
+    time.sleep(10)
+    print("Connection...")
+    time.sleep(2)
+    print("Préparation...")
+    time.sleep(2)
+    print("Démarage de la recherche...")
+    time.sleep(2)
+    print("Recherche de cc valid dans la database telegrame")
+    canal = random.randint(101, 135)
+    print(f"{canal} canal type = CC droper")
+    time.sleep(1)
+    print("Recherche...")
+    time.sleep(3)
+    balance = random.randint(200, 1500)
+    print(f"CC trouvé balance = {balance}€ Envoi en cours...")
+    time.sleep(20)
+    print("Finalisation...")
+elif choix_utilisateur == "2":
+    webbrowser.open('https://www.tiktok.com/@paypal_tech')
+elif choix_utilisateur == "3":
+    webbrowser.open('https://www.instagram.com/techh_paypal/')
+elif choix_utilisateur == "4":
+    while True:  
+        code_tra = input("Veuillez entrer votre code TRA : ")  
+        if code_tra == "5624":
+            print("Patientez...")  
+            time.sleep(5)
+            balance1 = random.randint(200, 1500)
+            balance2 = random.randint(200, 1500)
+            balance3 = random.randint(200, 1500)
+            balance4 = random.randint(200, 1500)
+            balance5 = random.randint(200, 1500)  # Génération d'un nombre aléatoire pour la balance
+
+            # Affichage des messages avec la balance
+            print(f"[+] CC en cours de validation balance = {balance1}€ Envoi en cours...")
+            print(f"[+] CC en cours de validation balance = {balance2}€ Envoi en cours...")
+            print(f"[+] CC en cours de validation balance = {balance3}€ Envoi en cours...")
+            print(f"[+] CC en cours de validation balance = {balance4}€ Envoi en cours...")
+            print(f"[+] CC en cours de validation balance = {balance5}€ Envoi en cours...")
+            time.sleep(10)
+            
+            break  # Sortie de la boucle une fois le code correct entré
+        else:
+            print("Code incorrect")
+
+
+elif choix_utilisateur == "5":
+    print("exiting..")
+    time.sleep(2)
+    os.system("exit")
+
+else:
+    print("Choix non valide. Le programme se termine.")
