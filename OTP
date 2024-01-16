@@ -1,0 +1,63 @@
+import os
+import time
+import random
+import webbrowser
+
+# Changer le titre de la fenêtre CMD
+os.system("title OTP-bot by zit_zitoune")
+
+# Définir le motif dans une variable
+motif = '''
+
+
+ ██████╗ ████████╗██████╗       ██████╗  ██████╗ ████████╗
+██╔═══██╗╚══██╔══╝██╔══██╗      ██╔══██╗██╔═══██╗╚══██╔══╝
+██║   ██║   ██║   ██████╔╝█████╗██████╔╝██║   ██║   ██║   
+██║   ██║   ██║   ██╔═══╝ ╚════╝██╔══██╗██║   ██║   ██║   
+╚██████╔╝   ██║   ██║           ██████╔╝╚██████╔╝   ██║   
+ ╚═════╝    ╚═╝   ╚═╝           ╚═════╝  ╚═════╝    ╚═╝   
+                                                          
+          
+
+
+                By zit_zitoune
+                                                         
+[1] Run the bot                [2] Tiktok          
+[3] Instagram                  [4] Exit      
+'''
+
+# Afficher le motif
+print(motif)
+
+# Demander à l'utilisateur de choisir
+choix_utilisateur = input("Your choice > ")
+
+# Traitement en fonction du choix
+if choix_utilisateur == "1":
+    print("running the bot...")
+    time.sleep(3)
+    phrase = input("Please enter a number phone or mail for the OTP code >")
+    print()
+    print()
+
+    print("Wait...")
+    time.sleep(10)
+    print("Connection...")
+    time.sleep(2)
+    print("Loading...")
+    time.sleep(2)
+    code = random.randint(1000, 999999999999)
+    print(f"[+] Your OTP code is {code}")
+    time.sleep(10000)
+elif choix_utilisateur == "2":
+    webbrowser.open('https://www.tiktok.com/@zit_zitoune0')
+elif choix_utilisateur == "3":
+    webbrowser.open('https://www.instagram.com/zit_zitoune9999/')
+
+elif choix_utilisateur == "4":
+    print("exiting..")
+    time.sleep(2)
+    os.system("exit")
+
+else:
+    print("Choice not valid, exiting..")
